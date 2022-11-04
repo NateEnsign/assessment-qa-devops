@@ -1,10 +1,18 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const {bots, playerRecord} = require('./data')
-const {shuffleArray} = require('./utils')
+const {bots, playerRecord} = require('../data')
+const {shuffleArray} = require('../utils')
+
 
 app.use(express.json())
+
+const {home, styles, js} = require("./controllers/pageCtrl")
+
+app.get("/", home)
+app.get("/styles", styles)
+app.get("/js", js)
+
 
 app.get('/api/robots', (req, res) => {
     try {
