@@ -4,6 +4,6 @@
     },
     "files": [
         "functions.test.ts",
-        "duelDuo.test.ts"
+        "duelDuo.tyest.ts"
     ]
 }
